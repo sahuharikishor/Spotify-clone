@@ -44,7 +44,7 @@ body {
 .icon-circle {
     width: 46px;  
     height: 46px; 
-    background-color: #2c2c2c; /* Gives the circle its dark gray color */
+    background-color: #1a1919; /* Gives the circle its dark gray color */
     border-radius: 50%; 
     
     /* Centers the home SVG inside the circle */
@@ -52,14 +52,16 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: transform 0.1s ease, border-color 0.2s ease;
 }
 .icon-circle .invert {
     width: 24px; /* Adjust this to make the house bigger or smaller inside the circle */
     
 }
 .icon-circle:hover{
-    background-color: rgb(68, 68, 68);
-    transition: background-color 0.2s ease, border 0.2s ease;
+    background-color: rgb(48, 48, 48);
+    transition: background-color 0.4s ease, border 0.4s ease;
+    transform: scale(1.04);
 }
 .search-container{
     /* position: relative; */
@@ -327,4 +329,41 @@ svg{
     color: #b3b1b1;
     cursor: pointer;
 }
+.flinks h5{
+    margin-top: 10px;
+    margin-left: 8px;
+    font-size: 11px;
+    color:white;
+    font-weight: 400 ;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    cursor: pointer;
+    text-decoration: underline;
 
+    
+}
+.footer-btn{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: transparent; 
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    border: 1px solid #727272; /* Grey border */
+    border-radius: 50px; /* Perfect pill shape */
+    margin-left: 26px;
+    margin-top: 38px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: transform 0.1s ease, border-color 0.2s ease;
+    /* transform: scale(1.04); */
+
+}
+.footer-btn:hover{
+    color: white;
+    transform: scale(1.04);
+}
+.footer-btn svg{
+    color: white;
+}
