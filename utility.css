@@ -86,3 +86,14 @@
     background-color: rgb(224, 222, 222);
     transform: scale(1.04);
 }
+.under-line:hover{
+    text-decoration: underline;
+    text-decoration-color: antiquewhite;
+}
+.Rbg-color{
+    /* background-color:#2b0e0e; */
+    /* background: linear-gradient(to bottom, #2b0e0e 0%, #121212 100%); */
+    /* padding: 20px; */
+    /* min-height: 100vh; */
+    /* background-image: radial-gradient(ellipse at top left, #2b0e0e 0%, transparent 70%); */
+}
