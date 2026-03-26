@@ -97,3 +97,20 @@
     /* min-height: 100vh; */
     /* background-image: radial-gradient(ellipse at top left, #2b0e0e 0%, transparent 70%); */
 }
+.card-container .card{
+    margin-left: 15px;
+    width: 180px;
+    font-size: 15px;
+    /* height: 50px;
+    padding-left: 30px; */
+    
+}
+.card > *{
+    padding-top: px;
+}
+.card img{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+    padding: 10px;
+}
