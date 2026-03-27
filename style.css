@@ -396,19 +396,22 @@ svg{
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
     /* margin-top: 20px; */
-    background-color: rgb(24, 24, 24);
+    background-color: rgb(46, 46, 46);
     
     
     /* background: linear-gradient(to bottom, #2b0e0e 0%) */
 
 }
 .Rheader h2{
-    font-size: 22px;
-    font-weight: 700px;
+    font-size: 23px;
+    font-weight: 700;
     font-style: normal;
-    line-height:15%;
+    line-height:normal;
+    /* font-family: 'Plus Jakarta Sans', sans-serif; */
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
+    margin-top: 20px;
+    
 
 }
 .Rheader .show-all{
@@ -418,7 +421,5 @@ svg{
     font-size: 13px;
     
 }
-.card-container{
 
-}
 

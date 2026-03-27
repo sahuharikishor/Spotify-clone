@@ -16,7 +16,7 @@
 }
 
 .bg-black{
-    background-color: rgb(14, 13, 13);
+    background-color: rgb(23, 23, 23);
     color: white;
 }
 
@@ -97,20 +97,45 @@
     /* min-height: 100vh; */
     /* background-image: radial-gradient(ellipse at top left, #2b0e0e 0%, transparent 70%); */
 }
+.card-container{
+    /* background-color: grey; */
+    padding-left: 20px;
+    /* margin-left: 20px; */
+}
 .card-container .card{
-    margin-left: 15px;
-    width: 180px;
+    /* margin-top:7px; */
+    width: 178px;
+    height: auto;
+    padding: 2px 10px 12px 10px;
     font-size: 15px;
-    /* height: 50px;
-    padding-left: 30px; */
+    /* background-color: grey; */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-out;
+    /* height: 50px; */
+    /* padding-left: 30px;  */
     
 }
+
+
+
 .card > *{
-    padding-top: px;
+    padding-top:3px;
 }
 .card img{
     width: 100%;
     object-fit: contain;
-    border-radius: 20px;
-    padding: 10px;
+    border-radius: 10px;
+    /* padding: 10px; */
 }
+.card p{
+    font-size: 13px;
+    color: rgb(139, 139, 139);
+}
+.card:hover{
+    background-color: rgb(31, 31, 31);
+}
+.card h4:hover, .card p:hover{
+    text-decoration: underline;
+}
+
