@@ -230,7 +230,9 @@ svg{
 }
 
 .right {
+    position: relative;
     width: 68vw;
+    background: linear-gradient(to bottom , rgb(37, 37, 37) 12% , transparent 100%);
     /* height: 80vh; */
     /* height: 100%; */
 }
@@ -371,13 +373,15 @@ svg{
 /* Right side css code */
 
 .Rcontainer{
-    position: relative;
+    position: absolute;
     width: 100%;
-    height: 340px;
+    max-height: 200vh;
+    overflow: scroll;
+    /* padding: 2px 0 4px 0px; */
     /* background-image: radial-gradient(ellipse at 15% 15%, #363636 0%, transparent 70%); */
     /* background: linear-gradient(to bottom, #2b0e0e 0%, #121212 100%) */
 }  
-/* .Rcontainer::before {
+/* .Rcontainer::after {
     content: "";
     position: absolute;
     top: 0;
@@ -388,16 +392,17 @@ svg{
     z-index: -1; 
 }   */
 .Rheader{
+    position:fixed ;
     display: flex;
+    width:100%;
     align-items: center;
     justify-content: space-between;
-    height: 25px;
-    padding: 33px;
+    height: 15px;
+    padding: 30px 33px ;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
-    /* margin-top: 20px; */
-    background-color: rgb(46, 46, 46);
     
+    /* background-color: rgb(30, 30, 30); */
     
     /* background: linear-gradient(to bottom, #2b0e0e 0%) */
 
@@ -421,5 +426,40 @@ svg{
     font-size: 13px;
     
 }
+/* .play{
+    position:absolute;
+    top: 140px;
+    right: 0px;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: all 0.3s ease-out;
 
+}
+.play:hover{
+    opacity: 1;
+    transform: translateY(0);
+    top: 86px;
+    
+} */
+
+.play {
+    position: absolute;
+    bottom: 63px;        /* anchor to bottom of card  */
+    right: 0px;
+    opacity: 0;
+    transform: translateY(10px);   /* start slightly below final position  */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+ /* THIS is the fix — trigger on CARD hover, not play-button hover  */
+.card:hover .play {
+    opacity: 1;
+    transform: translateY(0px);     /* slides up to rest position  */
+}
+
+/* Keep it visible if hovering the button itself  */
+.play:hover {
+    opacity: 1;
+    transform: translateY(0);
+}
 
