@@ -230,8 +230,10 @@ svg{
 }
 
 .right {
-    position: relative;
     width: 68vw;
+    height: 513px;
+    overflow-x: hidden;
+    overflow-y: scroll;
     background: linear-gradient(to bottom , rgb(37, 37, 37) 12% , transparent 100%);
     /* height: 80vh; */
     /* height: 100%; */
@@ -373,10 +375,12 @@ svg{
 /* Right side css code */
 
 .Rcontainer{
-    position: absolute;
-    width: 100%;
-    max-height: 200vh;
-    overflow: scroll;
+    
+    /* position:relative; */
+    /* width: 100%;
+    overflow-y: auto;
+    height: auto; */
+    
     /* padding: 2px 0 4px 0px; */
     /* background-image: radial-gradient(ellipse at 15% 15%, #363636 0%, transparent 70%); */
     /* background: linear-gradient(to bottom, #2b0e0e 0%, #121212 100%) */
@@ -392,7 +396,6 @@ svg{
     z-index: -1; 
 }   */
 .Rheader{
-    position:fixed ;
     display: flex;
     width:100%;
     align-items: center;
