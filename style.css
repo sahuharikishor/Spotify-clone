@@ -450,10 +450,10 @@ svg{
 
 .play {
     position: absolute;
-    bottom: 63px;        /* anchor to bottom of card  */
-    right: 0px;
+    bottom: -10px;        /* anchor to bottom of card  */
+    right:-9px;
     opacity: 0;
-    transform: translateY(10px);   /* start slightly below final position  */
+    transform: translateY(6px);   /* start slightly below final position  */
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
