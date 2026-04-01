@@ -215,7 +215,7 @@ svg{
 
 
 .container{
-    height: 80vh;
+    height: 77vh;
     gap: 9px;
     margin: 8px;
     margin-top: 2px;
@@ -231,10 +231,10 @@ svg{
 
 .right {
     width: 68vw;
-    height: 513px;
+    /* height: 513px; */
     overflow-x: hidden;
     overflow-y: scroll;
-    background: linear-gradient(to bottom , rgb(37, 37, 37) 12% , transparent 100%);
+    background: linear-gradient(to bottom , rgb(23, 23, 23) 12% , transparent 100%);
     /* height: 80vh; */
     /* height: 100%; */
 }
@@ -377,7 +377,7 @@ svg{
 .Rcontainer{
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
+    /* margin-bottom: 29px; */
     /* position:relative; */
     /* width: 100%;
     overflow-y: auto;
@@ -386,7 +386,8 @@ svg{
     /* padding: 2px 0 4px 0px; */
     /* background-image: radial-gradient(ellipse at 15% 15%, #363636 0%, transparent 70%); */
     /* background: linear-gradient(to bottom, #2b0e0e 0%, #121212 100%) */
-}  
+} 
+
 /* .Rcontainer::after {
     content: "";
     position: absolute;
@@ -432,6 +433,23 @@ svg{
     font-size: 13px;
     
 }
+.Trending-songs-card{
+    margin-bottom: 29px;
+
+}
+.Popular-artists-card{
+    margin-bottom:15px;
+}
+.Popular-albums-card{
+    margin-bottom: 14px;
+}
+.Popular-radio-cards{
+    margin-bottom: 12px;
+
+}
+.featured-cards{
+    margin-bottom: 75px;
+}
 /* .play{
     position:absolute;
     top: 140px;
@@ -469,3 +487,113 @@ svg{
     transform: translateY(0);
 }
 
+
+
+/*  footer section */
+
+hr{
+    border: none;
+    border-radius: 2px;
+    height: 1px;
+    background-color: rgb(200,200,200,0.2);
+    margin: 20px;
+}
+
+.R-footer{
+    display: flex;
+    margin:35px;
+    margin-top: 60px;
+    margin-bottom: 35px;
+    gap: 50px;
+}
+
+.footer-column h3{
+    font-size: 15px;
+}
+.footer-column ul a{
+    color: rgb(145, 144, 144);
+    text-decoration: none;
+    font-family: SpotifyMixUI, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    
+}
+.footer-column ul li a:hover{
+    color: white;
+    text-decoration: underline;
+    /* transform: scale(0.2s); */
+    
+}
+.footer-column ul li{
+    margin-top: 6px;
+    list-style: none;
+    
+}
+.social-footer{
+    display: flex;
+    gap: 15px;
+}
+.social-footer a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding:20px;
+    font-size: 16px;
+    background-color: rgb(39, 39, 39);
+    transition: all 0.1s ease;
+
+}
+.social-footer a:hover{
+    background-color: rgb(100, 100, 100);
+    /* transform: scale(1.02); */
+}
+.hor2{
+    margin: 30px;
+}
+.copyright{
+    margin: 40px 30px;
+
+    font-weight: 300;
+    color: grey;
+
+}
+
+/* body footer */
+
+.Bfooter{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: grey;
+    margin: 8px;
+    border-radius: 9px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+}
+/* .pline{
+    margin: 5px;
+} */
+
+.first_line{
+    font-size: 13px;
+    margin-bottom:4px;
+
+}
+.second_line{
+    font-size: 15px;
+    font-weight: normal;
+}
+.bsign-in{
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    width: 130px;
+    /* height: 35px; */
+    border-radius: 20px;
+}
