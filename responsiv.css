@@ -112,7 +112,6 @@
         position: fixed;
         bottom: 0;
         width: 100%;
-        background: rgba(0, 0, 0, 0.9);
         justify-content: space-around;
         padding: 10px 0;
         z-index: 1000;
