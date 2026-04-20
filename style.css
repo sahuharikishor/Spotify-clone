@@ -13,6 +13,7 @@ body {
     font-family: "CircularSp", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     /* font-size: 16px; */
+    
 
 }
 
@@ -551,9 +552,10 @@ hr{
 .footer-column ul a{
     color: rgb(145, 144, 144);
     text-decoration: none;
-    font-family: SpotifyMixUI, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic", sans-serif;
-    font-weight: bold;
+    /* font-family: SpotifyMixUI, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic", sans-serif; */
+    font-weight: lighter;
     font-size: 15px;
+    font-family: Inter, "Helvetica Neue", Arial, sans-serif;
     
 }
 .footer-column ul li a:hover{
@@ -644,4 +646,15 @@ hr{
 }
 .bsign-in:hover{
     transform: translateY(3px) scale(1.05);
+}
+
+.mobile-nav{
+    display: none;      
+}
+
+.mobile-bottom-nav{
+    display: none;
+}
+.rightFooter{
+    display: none;
 }
