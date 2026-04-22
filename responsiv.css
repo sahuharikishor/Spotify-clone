@@ -19,10 +19,103 @@
         margin-bottom: 0;
     }
     
-    .feature {
+    .feature{
         display: none;
     }
+    
+    .mobile-nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 8px 15px;
+    }
 
+    .mobile-nav img:first-child {
+        display: none;
+        width: 85px;
+        height: auto;
+    }
+
+    .rightside {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        /* margin-left: 100px; */
+    }
+
+    .App {
+        /* padding: 2px 15px; */
+        display: none;
+        width: 95px;
+        height: 35px;
+        border: none;
+        font-weight: bold;
+        border-radius: 40px;
+    }
+
+    .hamburger {
+        display: flex;
+        padding: 8px;
+        cursor: pointer;
+        /* z-index: 1010; */
+    }
+
+    .hamburger_container{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width:100%;
+        height: 100%;
+        top: 0px;
+        background-color: black;
+        color: white;
+        right:100%;
+        z-index: 1000;
+        transition: right 0.3s ease-in-out;
+       
+    }
+    .hamburger-content{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        margin-left: 20px;
+        left:10px;
+        top: 100px;
+        cursor: pointer;
+        font-size: 15px;
+    }
+    .hamburger_links ul{
+         list-style: none;
+         display: flex;
+         flex-direction: column;
+         gap: 22px;
+    }
+   
+    .close{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 15px;
+        cursor: pointer;
+        
+
+    }
+    .hamburger_auth{
+        display: flex;
+        flex-direction: column;
+        font-size: 19px;
+        gap: 35px;
+        cursor: pointer;
+    }
+    .hamburger-divider {
+    width: 20px;           
+    border-top: 2px solid white; 
+    margin: 50px 0  40px 0;      
+    }
+    
+
+    
     .R-footer {
         display: flex;
         flex-direction: column;
@@ -60,42 +153,19 @@
         padding-left: 10px;
 
     }
-
-    .mobile-nav {
-        display: flex;
-        align-items: center;
+    /* navbar for mobile   */
+    .mobile-nav{
         justify-content: space-between;
-        width: 100%;
-        padding: 8px 15px;
     }
-
     .mobile-nav img:first-child {
+        display: block;
         width: 85px;
         height: auto;
     }
 
-    .rightside {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        /* margin-left: 100px; */
-    }
-
     .App {
         /* padding: 2px 15px; */
-        width: 95px;
-        height: 35px;
-        border: none;
-        font-weight: bold;
-        border-radius: 40px;
-    }
-
-    .hamburger {
-        /* width: 40px;
-        height: 40px; */
         display: block;
-        padding: 8px;
-        cursor: pointer;
     }
 
     .mobile-bottom-nav {

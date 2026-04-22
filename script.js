@@ -95,3 +95,17 @@ creatCard(".featured-cards","Asset/region_global_default (1).jpg","","Your weekl
 creatCard(".featured-cards","Asset/region_in_default.jpg","","Your weekly update of","the most played...")
 creatCard(".featured-cards","Asset/region_global_default (2).jpg","","Your weekly update of","the most played...")
 creatCard(".featured-cards","Asset/region_in_default (1).jpg","","Your weekly update of","the most played...")
+
+
+
+
+
+// Add an  Event Listener  for Hamburger 
+document.querySelector(".hamburger").addEventListener('click',() =>{
+    document.querySelector('.hamburger_container').style.right = "0";
+})
+
+// Add an  Event Listener  for close  
+document.querySelector(".close").addEventListener('click',() =>{
+    document.querySelector('.hamburger_container').style.right = "-100%";
+})
