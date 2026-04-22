@@ -67,7 +67,7 @@ body {
 }
 .search-container{
     box-sizing: border-box;
-    position: relative;
+    /* position: relative; */
     display: flex;
     align-items: center;
     background-color: #242424;
@@ -76,19 +76,20 @@ body {
     height: 47px;
     width: 100%;
     max-width:468px; 
-    transition: all 0.2s ease;
     /* cursor: pointer; */
     border: 2px solid transparent;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
     /* overflow: hidden; */
-    
 }
 .search-container:hover {
     background-color: #2c2c2c;
-    box-shadow: 0 0 0 1px #464444;   
+    box-shadow: 0 0 0 1px #464444; 
+    transition-duration: 0.2s;  
 }
-.search-container.active{
-    border: 2px solid white;
-    box-shadow: none;
+.search-container.active{          /* this can be do without js by search-container:focus-within */
+    /* border: 2px solid white; */
+    box-shadow: 0 0 0 2px white !important;
+    
 }
 .search-icon svg{
     width: 24px;  
@@ -135,7 +136,7 @@ body {
     opacity: 0;
     visibility: hidden;
     margin-left: 8px;
-    transition: opacity 0.1s ease;
+    transition-duration: 0.3s;
 }
 /* .search_hover + .search-right-group{
     margin-left: auto;
@@ -360,18 +361,22 @@ svg{
     height: 225px;
     /* background-color: #131313; */
     overflow-y: scroll;
+    transition: all 0.3s ease;
 }
 .lbox::-webkit-scrollbar{
     width: 12px;
-    
-   
+
 }
 .lbox::-webkit-scrollbar-track {
-  /* background:  #777; */
+  background: transparent;
 }
 .lbox::-webkit-scrollbar-thumb{
-    background: #535353;  
+    background:transparent;
+    transition: background 0.3s ease;
     /* border-radius: 3px; */
+}
+.lbox.show-scroll::-webkit-scrollbar-thumb {
+    background: #535353;
 }
 
 .play_but{

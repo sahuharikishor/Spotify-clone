@@ -131,10 +131,22 @@
 } 
 .right::-webkit-scrollbar-thumb{
     background-color:rgb(99, 98, 98);
-    /* border-radius: 5px; */
-    border-top-right-radius: 7px;
-    border-bottom-right-radius: 7px;
+    border-radius: 0;
+    transition: border-radius 0.2s;
+    /* border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px; */
 }
+
+/* When at top */
+.right.at-top::-webkit-scrollbar-thumb {
+    border-top-right-radius: 8px;
+}
+
+/* When at bottom */
+.right.at-bottom::-webkit-scrollbar-thumb {
+    border-bottom-right-radius: 8px;
+}
+
 .card-container::-webkit-scrollbar{
     display: none;
 }

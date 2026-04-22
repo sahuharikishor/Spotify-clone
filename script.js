@@ -109,3 +109,77 @@ document.querySelector(".hamburger").addEventListener('click',() =>{
 document.querySelector(".close").addEventListener('click',() =>{
     document.querySelector('.hamburger_container').style.right = "-100%";
 })
+
+// Add an  Event Listener  for border of search_container  
+
+const searchInput = document.querySelector(".search-input");
+const searchContainer = document.querySelector(".search-container");
+
+// show border clicking on serch-input (Focus)
+searchInput.addEventListener('focus', () => {
+    searchContainer.classList.add('active'); // Class pakka add hogi
+});
+
+// remove border clicking on outside of the serch-input (Blur)
+searchInput.addEventListener('blur', () => {
+    searchContainer.classList.remove('active'); 
+});
+
+
+//  for lbox scrollbar
+
+const lbox = document.querySelector('.lbox');
+let timer;
+
+// 1. 1. When the mouse enters the container
+lbox.addEventListener('mouseenter', () => {
+    clearTimeout(timer); // Stop any previous hide timer
+    lbox.classList.add('show-scroll'); 
+});
+
+// 2. When the mouse leaves the container
+lbox.addEventListener('mouseleave', () => {
+    timer = setTimeout(() => {
+        lbox.classList.remove('show-scroll');
+    }, 2000); 
+});
+
+// 3. Keep the scrollbar visible while the user is scrolling - important
+lbox.addEventListener('scroll', () => {
+    lbox.classList.add('show-scroll');
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+        lbox.classList.remove('show-scroll');
+    }, 2000);
+});
+
+
+
+//   Add an  Event Listener  for Right container scrollbar
+
+const right = document.querySelector('.right');
+
+function updateScrollbar() {
+    const scrollTop = right.scrollTop;
+    const scrollHeight = right.scrollHeight;
+    const clientHeight = right.clientHeight;
+
+    // Remove all states first
+    right.classList.remove('at-top', 'at-bottom');
+
+    if (scrollTop === 0) {
+        // At Top
+        right.classList.add('at-top');
+    } 
+    else if (scrollTop + clientHeight >= scrollHeight - 1) {
+        // At Bottom
+        right.classList.add('at-bottom');
+    } 
+    
+}
+
+// Run on scroll
+right.addEventListener('scroll', updateScrollbar);
+
+// Run once on load
+updateScrollbar();
