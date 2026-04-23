@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="shortcut icon" href="img-icon/favicon spotify.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="stylesheet" href="responsiv.css">
+</head>
+<style>
+    /* Base Styles */
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+
+    }
+
+    body {
+        background-color: #121212;
+        color: white;
+        display: flex;
+        justify-content: center;
+        padding-top: 95px;
+        font-family: 'CircularSp', 'CircularSp-Arab', 'DM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 325px;
+        text-align: center;
+    }
+
+    /* Header */
+
+    h1 {
+        margin-bottom: 32px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        font-size: 44px;
+        font-style: normal;
+        color: rgb(255, 255, 255);
+        letter-spacing: -2px;
+        line-height: 1.8ch;
+        word-spacing: -8px;
+    }
+
+    /* Form Styling */
+    .signup_form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* align-items: flex-start; */
+    }
+
+    label {
+        display: flex;
+        justify-content: flex-start;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    input {
+        width: 100%;
+        padding: 15px;
+        background-color: #121212;
+        border: 1px solid #858585;
+        border-radius: 4px;
+        color: aliceblue;
+        margin-bottom: 8px;
+    }
+
+    input::placeholder {
+        font-size: 15px;
+        color: rgb(175, 175, 175);
+        font-weight: 500;
+    }
+
+    input:hover {
+        border: 1px solid white;
+    }
+
+    input:focus {
+        border: 2px solid white;
+        outline: none;
+    }
+
+    .signup-button {
+        width: 100%;
+        background-color: #1ed760;
+        color: black;
+        padding: 15px;
+        border-radius: 300px;
+        font-size: 15px;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        margin-top: 8px;
+    }
+
+    /* Divider "or" */
+    .container>div:nth-child(3) {
+        margin: 8px 0;
+        font-size: 14px;
+        color: white;
+        position: relative;
+        width: 100%;
+    }
+
+    /* Social Buttons */
+    .signup_method {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .signup_method button {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 13px;
+        background: transparent;
+        border: 1px solid #727272;
+        border-radius: 300px;
+        color: rgb(226, 226, 226);
+        cursor: pointer;
+        font-size: 17px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        gap: 12px;
+        transition: all 0.1s ease;
+        filter: blur(0.4px);
+    }
+
+    .phone svg,
+    .google svg,
+    .facebook svg,
+    .apple svg {
+        position: absolute;
+        left: 20px;
+    }
+
+    .signup_method button:hover {
+        border-color: rgb(214, 214, 214);
+        transform: scale(1.03);
+    }
+
+    /* Footer Section */
+    footer {
+        margin-top: 25px;
+        /* border-top: 1px solid #292929; */
+        padding-top: 32px;
+        width: 100%;
+    }
+
+    .login {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        font-size: 15px;
+        color: #b3b3b3;
+        font-weight: 500;
+        margin-bottom: 32px;
+    }
+
+    .login div:last-child a{
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 900;
+        letter-spacing: -1px;
+        filter: blur(0.4px);
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        font-size: 12px;
+        font-weight: lighter;
+        color: #b3b3b3;
+        margin-top: 80px;
+        width: 110%;
+
+    }
+
+    .footer p:last-child {
+        margin-bottom: 40px;
+    }
+
+    .footer p a {
+        color: rgb(177, 176, 176);
+    }
+    .footer p a:hover{
+        color: #1ed760;
+    }
+</style>
+
+<body>
+    <main class="container">
+        <div class="header">
+            <img class="sicon" src="img-icon/Spotify-Icon-Black-Logo.svg" alt="Spotify logo">
+            <h1>Welcome back</h1>
+        </div>
+        <form class="signup_form" action="#" method="POST">
+            <div class="input_group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email"  required>
+            </div>
+
+            <button type="submit" class="signup-button">Continue</button>
+        </form>
+        <div>or</div>
+        <div class="signup_method">
+            <button class="phone">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    stroke="rgb(226, 226, 226)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                    <!-- Phone body -->
+                    <rect x="7" y="2" width="12" height="18" rx="2"></rect>
+
+                    <!-- Bottom circle (home button) -->
+                    <circle cx="13" cy="15" r="0.5"></circle>
+
+                </svg>
+                <span>Continue with phone number</span>
+            </button>
+            <button class="google">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                        fill="#4285F4" />
+                    <path
+                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                        fill="#34A853" />
+                    <path
+                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"
+                        fill="#FBBC05" />
+                    <path
+                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                        fill="#EA4335" />
+                </svg>
+                <span>Continue with Google</span>
+            </button>
+            <button class="facebook">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"
+                        fill="#1877F2" />
+                    <path
+                        d="M16.671 15.563l.532-3.49h-3.328V9.823c0-.949.465-1.874 1.956-1.874h1.513V4.996s-1.374-.235-2.686-.235c-2.741 0-4.533 1.662-4.533 4.67v2.641H7.078v3.49h3.047V24a12.12 12.12 0 003.875 0v-8.437h2.671z"
+                        fill="white" />
+                </svg>
+                <span>Continue with Facebook</span>
+            </button>
+            <button class="apple">
+                <svg width="24px" height="24px" fill="white" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <title>ionicons-v5_logos</title>
+                    <path
+                        d="M349.13,136.86c-40.32,0-57.36,19.24-85.44,19.24C234.9,156.1,212.94,137,178,137c-34.2,0-70.67,20.88-93.83,56.45-32.52,50.16-27,144.63,25.67,225.11,18.84,28.81,44,61.12,77,61.47h.6c28.68,0,37.2-18.78,76.67-19h.6c38.88,0,46.68,18.89,75.24,18.89h.6c33-.35,59.51-36.15,78.35-64.85,13.56-20.64,18.6-31,29-54.35-76.19-28.92-88.43-136.93-13.08-178.34-23-28.8-55.32-45.48-85.79-45.48Z" />
+                    <path
+                        d="M340.25,32c-24,1.63-52,16.91-68.4,36.86-14.88,18.08-27.12,44.9-22.32,70.91h1.92c25.56,0,51.72-15.39,67-35.11C333.17,85.89,344.33,59.29,340.25,32Z" />
+                </svg>
+                <span>Continue with Apple</span>
+            </button>
+
+        </div>
+        <footer>
+            <div class="login">
+                <div>Don't have an account?</div>
+                <div><a href="Sign-up.html">Sign up</a></div>
+            </div>
+            <div class="footer">
+                <p>This site is protected by reCAPTCHA and the Google <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> apply. </p>
+                <!-- <p><a href="#">Policy</a> and <a href="#">Terms of Service</a> apply.</p> -->
+            </div>
+        </footer>
+    </main>
+
+
+</body>
+
+</html>
