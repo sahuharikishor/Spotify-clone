@@ -18,11 +18,11 @@
     .featured-cards {
         margin-bottom: 0;
     }
-    
-    .feature{
+
+    .feature {
         display: none;
     }
-    
+
     .mobile-nav {
         display: flex;
         align-items: center;
@@ -61,61 +61,70 @@
         /* z-index: 1010; */
     }
 
-    .hamburger_container{
+    .hamburger_container {
         display: flex;
         flex-direction: column;
         position: fixed;
-        width:100%;
+        width: 100%;
         height: 100%;
         top: 0px;
         background-color: black;
         color: white;
-        right:100%;
+        right: 100%;
         z-index: 1000;
         transition: right 0.3s ease-in-out;
-       
+
     }
-    .hamburger-content{
+
+    .hamburger-content {
         display: flex;
         position: absolute;
         flex-direction: column;
         margin-left: 20px;
-        left:10px;
+        left: 10px;
         top: 100px;
         cursor: pointer;
         font-size: 15px;
     }
-    .hamburger_links ul{
-         list-style: none;
-         display: flex;
-         flex-direction: column;
-         gap: 22px;
+
+    .hamburger_links ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
     }
-   
-    .close{
+
+    .close {
         display: block;
         position: absolute;
         top: 20px;
         right: 15px;
         cursor: pointer;
-        
+
 
     }
-    .hamburger_auth{
+
+    .hamburger_auth {
         display: flex;
         flex-direction: column;
         font-size: 19px;
         gap: 35px;
         cursor: pointer;
     }
-    .hamburger-divider {
-    width: 20px;           
-    border-top: 2px solid white; 
-    margin: 50px 0  40px 0;      
-    }
-    
 
-    
+    .hamburger_auth a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .hamburger-divider {
+        width: 20px;
+        border-top: 2px solid white;
+        margin: 50px 0 40px 0;
+    }
+
+
+
     .R-footer {
         display: flex;
         flex-direction: column;
@@ -153,10 +162,12 @@
         padding-left: 10px;
 
     }
+
     /* navbar for mobile   */
-    .mobile-nav{
+    .mobile-nav {
         justify-content: space-between;
     }
+
     .mobile-nav img:first-child {
         display: block;
         width: 85px;
@@ -176,7 +187,7 @@
         justify-content: space-around;
         padding: 15px 0;
         overflow: hidden;
-        
+
     }
 
     .nav-item {
@@ -247,8 +258,7 @@
 
     }
 
-
-
+     
 }
 
 /* 3. For Mobile Phones (Max-width: 480px) */

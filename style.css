@@ -76,6 +76,7 @@ body {
     height: 47px;
     width: 100%;
     max-width:468px; 
+    margin-left:-22px;
     /* cursor: pointer; */
     border: 2px solid transparent;
     transition: background-color 0.2s ease, box-shadow 0.2s ease;
@@ -191,7 +192,7 @@ svg{
     align-items: center;
 } */
 .links{
-    margin-left:150px;
+    margin-left:140px;
     color: rgb(194, 193, 193);
     font-size: 15px;
     
@@ -226,6 +227,7 @@ svg{
     margin-left: 20px;
     transition: all 0.2s ease;
     cursor: pointer;
+    filter: blur(0.4px);
 
 }
 .install svg{
@@ -243,19 +245,22 @@ svg{
     display: flex;
     align-items: center;
     font-size: 14px;
-    color: rgb(194, 193, 193);
     margin-left: 30px;
     gap: 20px;
     cursor: pointer;
 
 }
+.auth span a{
+    text-decoration: none;
+    color: rgb(194, 193, 193);
+    filter: blur(0.4px);
+}
 
-.auth button{
+.auth button {
     padding: 14px;
     margin-right: 10px;
     width: 105px;
     background-color: white;
-    color: black;
     font-size:15px;
     font-weight: bold;
     border: none;
@@ -263,7 +268,7 @@ svg{
     border-radius: 50px;
     transition: background-color 0.1s ease, transform 0.1s ease;
 }
-.auth span:hover{
+.auth span a:hover{
     color: white;
     transform: scale(1.04);
 }
@@ -272,7 +277,10 @@ svg{
     transform: scale(1.01);
 
 }
-
+.login a{
+    text-decoration: none;
+    color: black;
+}
 
 /*               container             */
 
@@ -685,4 +693,185 @@ hr{
 }
 .rightFooter{
     display: none;
+}
+
+/* for spotify menu  */
+
+.spotify-menu {
+    display: none;
+    position: absolute;
+    background-color: #282828;
+    padding: 4px;
+    border-radius: 10px;
+    margin: 260px 0 0 300px;
+    width: 370px;
+    box-shadow: 0 16px 24px rgba(0,0,0,.3), 0 6px 8px rgba(0,0,0,.2);
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.2s ease; /* Smooth background change */
+}
+
+.menu-item:hover {
+    background-color: #3e3e3e; /* Hover effect */
+}
+
+.icon-circle {
+    width: 48px;
+    height: 48px;
+    background-color: #3e3e3e;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+    flex-shrink: 0;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Animation timing */
+}
+
+.menu-item:hover .icon-circle svg {
+    transform: rotate(10deg); /* some clockwise rotation */
+}
+
+/* .blend svg .c1 {
+    fill: white;
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+}
+
+.blend svg .c2 {
+    fill: white;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+.blend:hover svg .c1,
+.blend:hover svg .c2 {
+    opacity: 1;
+} */
+
+.menu-item:hover svg circle,
+.menu-item:hover svg rect {
+    fill: #1ed760; /* Spotify Green color */
+}
+/* .menu-item:hover svg circle .c1{
+    fill: #1ed760;
+} */
+.menu-item:hover svg path{
+    stroke: #1ed760;
+}
+
+.text-group {
+    display: flex;
+    flex-direction: column;
+    font-family: "Circular Std", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.title {
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 2px;
+}
+
+.subtitle {
+    color: #b3b3b3;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.menu-divider {
+    height: 1px;
+    background-color: #3e3e3e;
+    margin: 4px 18px;
+}
+.spotify-menu.active{
+    display: block;
+}
+.lplus-icon {
+    transition: transform 0.3s ease;
+}
+.lplus-icon.active{
+    transform: rotate(45deg);
+}
+
+
+
+/* for tooltip- card */
+.tooltip-card {
+    display: none;
+    position: absolute;
+    background-color: #0d72ea; 
+    padding: 16px 20px;
+    border-radius: 8px;
+    width: 320px;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    font-family: 'Inter', sans-serif; 
+    margin: -110px 0  0 430px;
+    z-index: 1000;
+}
+
+.tooltip-content h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.tooltip-content p {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.tooltip-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+}
+
+.not-now-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 8px 24px;
+    border-radius: 500px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.login-btn:hover {
+    transform: scale(1.04);
+}
+
+/* Tooltip Arrow Logic */
+.tooltip-arrow {
+    position: absolute;
+    left: -8px; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #0d72ea; 
+}
+.tooltip-card.active{
+    display: block;
 }

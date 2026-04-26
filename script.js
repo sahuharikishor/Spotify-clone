@@ -183,3 +183,50 @@ right.addEventListener('scroll', updateScrollbar);
 
 // Run once on load
 updateScrollbar();
+
+
+// Add an  Event Listener  for Spotify menu card
+
+const btn = document.querySelector('.create-btn');
+const menu = document.querySelector('.spotify-menu');
+const plus_icon = document.querySelector('.lplus-icon');
+
+// Create button click
+btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+
+    // toggle menu
+    menu.classList.toggle('active');
+    plus_icon.classList.toggle('active');
+
+    // close tooltip
+    tooltip.classList.remove('active');
+});
+
+// Add an  Event Listener  for tooltip-card
+const playBtn = document.querySelector('.play_but');
+const tooltip = document.querySelector('.tooltip-card');
+
+// Play button click
+playBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+
+    // open tooltip
+    tooltip.classList.add('active');
+
+    // close menu
+    menu.classList.remove('active');
+    plus_icon.classList.remove('active');
+});
+
+//  Not now button
+document.querySelector('.not-now-btn').addEventListener('click', () => {
+    tooltip.classList.remove('active');
+});
+
+// Outside click → all close
+document.addEventListener('click', () => {
+    menu.classList.remove('active');
+    tooltip.classList.remove('active');
+    plus_icon.classList.remove('active');
+});

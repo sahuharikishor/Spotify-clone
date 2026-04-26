@@ -81,8 +81,8 @@
                     </div>
 
                     <div class="auth">
-                        <span class="signup">Sign up</span>
-                        <button class="login">Log in</button>
+                        <span class="signup"> <a href="Sign-up.html">Sign up</a></span>
+                        <button class="login"> <a href="log-in.html">Log in</a></button>
                     </div>
                 </div>
 
@@ -99,8 +99,8 @@
                     </div>
                     <div class="hamburger-content">
                         <div class="hamburger_auth">
-                            <div>Log in</div>
-                            <div>Sign up</div>
+                            <div><a href="log-in.html">Log in</a></div>
+                            <div><a href="Sign-up.html">Sign up</a></div>
                         </div>
                         <div class="hamburger-divider"></div>
                         <div class="hamburger_links">
@@ -143,15 +143,79 @@
             <div class="library">
                 <div class="lheader">
                     <span>Your Library</span>
-                    <button>
+                    <button class="create-btn">
                         <!-- <span class="plus">&#43</span> -->
-                        <svg width="16" height="16" viewBox="0 0 24 24" stroke="currentColor" fill="none"
-                            stroke-width="2">
+                        <svg class="lplus-icon" width="16" height="16" viewBox="0 0 24 24" stroke="currentColor"
+                            fill="none" stroke-width="2">
                             <line x1="12" y1="5" x2="12" y2="19" stroke-linecap="round" />
                             <line x1="5" y1="12" x2="19" y2="12" stroke-linecap="round" />
                         </svg>
                         <span>Create</span>
                     </button>
+                    <div class="spotify-menu">
+                        <div class="menu-item">
+                            <div class="icon-circle">
+                                <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- <circle cx="24" cy="24" r="22" fill="#3a3a3a" /> -->
+                                    <g fill="none" stroke="none">
+                                        <!-- MUSIC NOTES GROUP -->
+                                        <!-- Top beam -->
+                                        <rect x="19" y="18" width="14" height="2" rx="0" fill="white" />
+                                        <!-- Left stem -->
+                                        <rect x="19" y="20" width="2" height="13" rx="0" fill="white" />
+                                        <!-- Right stem -->
+                                        <rect x="30.8" y="18" width="2" height="11" rx="0" fill="white" />
+                                        <!-- Left note head -->
+                                        <circle cx="18.5" cy="33.5" r="3" fill="white" />
+                                        <!-- Right note head -->
+                                        <circle cx="30.5" cy="31.5" r="3" fill="white" />
+
+                                        <!-- PLUS SIGN — top-left of music group -->
+                                        vertical bar
+                                        <rect x="13" y="13" width="1.8" height="8" rx="0.9" fill="white" />
+                                        <!-- horizontal bar -->
+                                        <rect x="10" y="16" width="8" height="1.8" rx="0.9" fill="white" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="text-group">
+                                <span class="title">Playlist</span>
+                                <span class="subtitle">Create a playlist with songs or episodes</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="icon-circle blend">
+                                <svg width="37" height="37" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <g transform="rotate(-35 12 12)">
+                                        <circle cx="9.5" cy="12" r="5.7" fill="white" opacity="0.3" />
+                                        <circle cx="14.5" cy="12" r="5.7" fill="white" opacity="0.5" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="text-group">
+                                <span class="title">Blend</span>
+                                <span class="subtitle">Combine your friends' tastes into a playlist</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-divider"></div>
+
+                        <div class="menu-item">
+                            <div class="icon-circle fill-icon">
+                                <svg width="26" height="26" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3 7C3 5.89543 3.89543 5 5 5H9.41421C9.94467 5 10.4534 5.21071 10.8284 5.58579L12.4142 7.17157C12.7893 7.54665 13.298 7.75736 13.8284 7.75736H19C20.1046 7.75736 21 8.65193 21 9.7565V17C21 18.1046 20.1046 19 19 19H5C3.89543 19 3 18.1046 3 17V7Z"
+                                        stroke="white" stroke-width="1.8" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="text-group">
+                                <span class="title">Folder</span>
+                                <span class="subtitle">Organize your playlists</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="lbox">
                     <div class="playlist box">
@@ -160,6 +224,19 @@
                             <p>It's easy we'll help you</p>
                         </div>
                         <button class="lbut play_but">Create playlist</button>
+                        <div class="tooltip-card">
+                            <div class="tooltip-content">
+                                <h3>Create a playlist</h3>
+                                <p>Log in to create and share playlists.</p>
+                            </div>
+
+                            <div class="tooltip-actions">
+                                <button class="not-now-btn">Not now</button>
+                                <button class="login login-btn"> <a href="log-in.html">Log in</a></button>
+                            </div>
+
+                            <div class="tooltip-arrow"></div>
+                        </div>
 
                     </div>
                     <div class="podcast box">
@@ -198,6 +275,7 @@
                     English
                 </button>
             </div>
+
             <!-- <div class="home bg-gray rounded m-1 p-1">
                 <div class="logo"><img class="invert" src="img/logo.svg" alt="logo"></div>
                 <ul>
@@ -207,6 +285,7 @@
             </div> -->
 
         </div>
+
         <div class="right bg-black rounded ">
             <div class="Rcontainer ">
                 <div class="Rheader">

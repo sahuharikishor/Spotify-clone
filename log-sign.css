@@ -1,0 +1,269 @@
+/* Base reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 95px;
+    font-family: 'CircularSp', 'CircularSp-Arab', 'DM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 325px;
+    text-align: center;
+}
+
+/* header */
+h1 {
+    margin-bottom: 32px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    font-size: 44px;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+    letter-spacing: -2px;
+    line-height: 1.8ch;
+    word-spacing: -8px;
+}
+
+/* Form Styling */
+.signup_form,
+.login_form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+}
+
+label {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    background-color: #121212;
+    border: 1px solid #858585;
+    border-radius: 4px;
+    color: aliceblue;
+    margin-bottom: 8px;
+}
+
+input::placeholder {
+    font-size: 15px;
+    color: rgb(175, 175, 175);
+    font-weight: 500;
+}
+
+input:hover {
+    border: 1px solid white;
+}
+
+input:focus {
+    border: 2px solid white;
+    outline: none;
+}
+
+.primary-btn {
+    width: 100%;
+    background-color: #1ed760;
+    color: black;
+    padding: 15px;
+    border-radius: 300px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+/* Divider "or" */
+.ls-divider{
+    margin:8px 0;
+    font-size: 14px;
+    color: white;
+    position: relative;
+    width: 100%;
+}
+
+/* Social Buttons */
+.signup_method {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.signup_method button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid #727272;
+    border-radius: 300px;
+    color: rgb(226, 226, 226);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    gap: 8px;
+    transition: all 0.1s ease;
+    filter: blur(0.1px);
+}
+
+.social-btn svg {
+    position: absolute;
+    left: 20px;
+}
+
+.signup_method button:hover {
+    border-color: rgb(214, 214, 214);
+    transform: scale(1.05);
+}
+
+/* Footer Section */
+footer {
+    margin-top: 25px;
+    /* border-top: 1px solid #292929; */
+    padding-top: 32px;
+    width: 100%;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    font-size: 15px;
+    color: #b3b3b3;
+    font-weight: 500;
+    margin-bottom: 32px;
+}
+
+.login div:last-child a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    filter: blur(0.1px);
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 12px;
+    font-weight: lighter;
+    color: #b3b3b3;
+    margin-top: 80px;
+    width: 110%;
+
+}
+
+.footer p a {
+    color: rgb(177, 176, 176);
+}
+
+.footer p a:hover {
+    color: #1ed760;
+}
+
+
+@media (max-width:480px) {
+
+    /* for sign-up and log-in form */
+    body{
+        margin-top: -55px;
+        height: auto;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        max-width: 325px;
+        text-align: center;
+        margin: 0 30px 0 35px;
+        margin-top: 10px;
+    }
+
+    .container h1 {
+        font-family: 80px;
+        letter-spacing: -0.5px;
+        word-spacing: -5px;
+        line-height: 2ch;
+
+    }
+    .loginheader{
+        max-width: 270px;
+        /* line-height: 3ch; */
+        letter-spacing: 1px;
+        /* font-size: 70px; */
+    }
+    .signup_form{
+        margin-top:-10px;
+    }
+    .smg{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .signup_method button{
+        filter: blur(0);
+        color: white;
+        font-size: 15px;
+        /* font-weight: 600; */
+    }
+    footer{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    
+    .signup{
+        gap: 15px;
+        margin-bottom: 60px;
+    }
+    
+    .login div:last-child a{
+        filter: blur(0);
+        /* letter-spacing: 1px; */
+        color: white;
+        font-size: 15px;
+    }
+    .footer{
+        margin-top:0px;
+    }
+
+    .footer p {
+        font-size: 10px;
+        width: 90%;
+    }
+    .signupfooter{
+        display: block;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        margin:0 14px;
+        /* margin-top: 8px; */
+    }
+
+    
+}
